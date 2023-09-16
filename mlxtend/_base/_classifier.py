@@ -16,7 +16,7 @@ class _Classifier(object):
         pass
 
     def _check_target_array(self, y, allowed=None):
-        if not isinstance(y[0], (int, np.integer)):
+        if not isinstance(y[0], (int, int)):
             raise AttributeError("y must be an integer array.\nFound %s" % y.dtype)
         found_labels = np.unique(y)
         if (found_labels < 0).any():
